@@ -1,0 +1,133 @@
+.header 
+  background: url(../img/header/bg.png) no-repeat 
+  background-size: cover 
+  background-position: center 
+  height: 100vh 
+  background-attachment: fixed 
+  & .navigation
+    position: fixed 
+    top: 40px 
+    right: 50px 
+    z-index: 9999
+    & .menu
+      & .burger 
+        width: 50px 
+        height: 50px 
+        background: rgba(#ffffff,.08) 
+        border-radius: 50%
+        border: 5px solid #171717
+        display: flex 
+        align-items: center
+        justify-content: flex-end
+        position: relative
+        cursor: pointer
+        z-index: 9999
+        &.active span 
+          display: none 
+        &.active::before 
+          transform: translateY(-50%) rotate(45deg)
+          top: 50%
+        &.active::after 
+          width: 27px 
+          transform: translateY(-50%) rotate(-45deg)
+          top: 50%
+        & span 
+          width: 18px 
+          height: 3px 
+          background: #c6a15b
+          border-radius: 1.1px 
+          margin-right: 5px 
+          transition: .3s linear 
+        &::before
+          content: ''
+          position: absolute
+          width: 27px 
+          height: 3px 
+          background: #c6a15b
+          top: 10px  
+          right: 5px 
+          border-radius: 1.1px 
+          transition: .3s linear 
+        &::after 
+          content: ''
+          position: absolute
+          width: 24px 
+          height: 3px 
+          background: #c6a15b
+          bottom: 10px  
+          right: 5px 
+          border-radius: 1.1px 
+          transition: .3s linear 
+      & .main-menu 
+        position: fixed 
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(#000000,.9)
+        z-index: 9998
+        transform: translateY(-100%)
+        transition: .3s linear 
+        &.show 
+          transform: translateY(0)
+        & .main-menu-wrap
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          position: absolute
+          & a 
+            display: block 
+            text-align: center
+            text-transform: uppercase
+            color: #ffffff
+            +black 
+            font-size: 30px
+            margin-top: 50px  
+            transition: .3s linear 
+            letter-spacing: 10px 
+            &:hover
+              color: #c6a15b
+  & .header-main
+    display: flex 
+    flex-direction: column 
+    justify-content: center
+    align-items: center
+    height: 100%
+    & h1 
+      text-transform: uppercase
+      +black 
+      font-size: 70px 
+      line-height: 1
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        background: #c6a15b
+        width: 340px 
+        height: 3px 
+        top: -15px 
+    & p 
+      text-transform: uppercase
+      letter-spacing: 10.62px 
+      margin-top: 10px      
+  & .header-down
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 50px 
+    & .fas 
+      +solid 
+      font-size: 40px 
+      animation: slidein 2s infinite 
+      @keyframes slidein 
+        0%
+          transform: translateY(-50px)
+          opacity: 0
+        100%
+          transform: translateY(0)
+          
+
+
+
+
