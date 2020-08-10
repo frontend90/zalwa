@@ -5,11 +5,23 @@
   height: 100vh 
   background-attachment: fixed 
   & .navigation
+    display: flex 
+    align-items: center
     position: fixed 
-    top: 40px 
-    right: 50px 
     z-index: 9999
+    & .logo 
+      position: fixed 
+      top: 40px 
+      left: 50px 
+      & h2 
+        text-transform: uppercase
+        font-size: 30px 
+        color: #c6a15b
+        +type 
     & .menu
+      position: fixed 
+      top: 40px 
+      right: 50px 
       & .burger 
         width: 50px 
         height: 50px 
@@ -126,7 +138,26 @@
           opacity: 0
         100%
           transform: translateY(0)
-          
+  & .header-social
+    position: fixed 
+    bottom: 50px 
+    left: 50px 
+    & a 
+      color: rgba(#ffffff,.5)
+      margin-left: 5px 
+      &:first-of-type
+        margin-left: 0
+      & .fab 
+        +brand 
+        width: 27px 
+        height: 27px 
+        border: 1px solid rgba(#ffffff,.5)
+        display: inline-flex 
+        align-items: center
+        justify-content: center
+        transition: .3s linear 
+        &:hover
+          color: #c6a15b
 
 
 

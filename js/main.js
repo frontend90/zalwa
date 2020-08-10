@@ -31,3 +31,8 @@ document.documentElement.addEventListener("click", function (e) {
     user_icon.classList.remove('active');
   }
 });
+
+$('.main-menu-wrap a').click(function () {
+  $('.main-menu').removeClass('show');
+  $('.burger').removeClass('active');
+});
